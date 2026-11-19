@@ -1,0 +1,35 @@
+{
+    "logging": {
+        "version": 1,
+        "handlers": {
+            "ntfyHandler": {
+                "class": "ntfy_handler.NtfyHandler",
+                "level": "INFO",
+                "server_url": "https://ntfy.sh",
+                "topic_name": "",
+                "log_level_priority_map": {
+                    "10": 1,
+                    "20": 2,
+                    "30": 3,
+                    "40": 3,
+                    "50": 3
+                },
+                "ntfy_headers": {
+                    "X-Markdown": "true"
+                }
+            }
+        },
+        "loggers": {
+            "muckrock_updates": {
+                "handlers": [
+                    "ntfyHandler"
+                ],
+                "level": "INFO"
+            }
+        }
+    },
+    "auth_info": {
+        "username": "muckrock@example.com",
+        "password": ""
+    }
+}
